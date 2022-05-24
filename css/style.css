@@ -191,19 +191,13 @@ footer {
   }
   .card__calculator {
     grid-column: 3/-1;
-    max-width: 350px;
+    transform: translateY(-50%);
   }
   .card__karma {
     grid-column: -3/-2;
-    max-width: 350px;
   }
   .card__supervisor {
-    max-width: 350px;
     transform: translateY(50%);
-  }
-  .card__calculator {
-    max-width: 350px;
-    transform: translateY(-50%);
   }
 }
 
