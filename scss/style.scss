@@ -1,0 +1,155 @@
+@use "../scss/partials/" as u;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+// ========== typography ==========
+header {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: var(--very-dark-blue);
+}
+
+h1,
+h2 {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+  font-size: var(--base-fs);
+  color: var(--grayish-blue);
+}
+
+// ========== layout ==========
+.container {
+  width: 90%;
+  max-width: 375px;
+  margin: 4.5rem auto;
+}
+
+header {
+  p {
+    margin-block: 1rem 4.5rem;
+  }
+}
+
+.card {
+  display: grid;
+  gap: 1.5rem;
+
+  p {
+    margin-block: 0.5rem 2rem;
+  }
+
+  img {
+    margin-left: auto;
+  }
+
+  &__supervisor {
+    padding: 1.75rem 1.5rem;
+    border-top: 4px solid var(--cyan);
+    border-radius: 0.5rem;
+    box-shadow: 0px 16px 20px 4px hsl(215, 39%, 90%);
+  }
+
+  &__teambuilder {
+    padding: 1.75rem 1.5rem;
+    border-top: 4px solid var(--red);
+    border-radius: 0.5rem;
+    box-shadow: 0px 16px 20px 4px hsl(215, 39%, 90%);
+  }
+
+  &__karma {
+    padding: 1.75rem 1.5rem;
+    border-top: 4px solid var(--orange);
+    border-radius: 0.5rem;
+    box-shadow: 0px 16px 20px 4px hsl(215, 39%, 90%);
+  }
+
+  &__calculator {
+    padding: 1.75rem 1.5rem;
+    border-top: 4px solid var(--blue);
+    border-radius: 0.5rem;
+    box-shadow: 0px 16px 20px 4px hsl(215, 39%, 90%);
+  }
+}
+
+footer {
+  margin-bottom: 1rem;
+}
+
+// media queries =================
+// css grid layout ===============
+
+// small screen breakpoint (mobile)
+@media all and (min-width: 480px) {
+  .container {
+    width: 90%;
+    max-width: 768px;
+  }
+
+  header {
+    max-width: 375px;
+    margin-inline: auto;
+  }
+
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// small screen breakpoint (tablet)
+@media all and (min-width: 810px) {
+  .container {
+    width: 90%;
+    max-width: 1440px;
+  }
+
+  header {
+    max-width: 505px;
+    margin-inline: auto;
+  }
+
+  .card {
+    grid-template-columns: repeat(3, 1fr);
+
+    &__calculator {
+      grid-column: 3 / -1;
+      max-width: 350px;
+    }
+
+    &__karma {
+      grid-column: -3 / -2;
+      max-width: 350px;
+    }
+
+    &__supervisor {
+      max-width: 350px;
+      transform: translateY(50%);
+    }
+
+    &__calculator {
+      max-width: 350px;
+      transform: translateY(-50%);
+    }
+  }
+}

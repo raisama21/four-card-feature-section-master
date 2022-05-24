@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --base-fs: 0.9375rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: var(--very-dark-blue);
+}
+
+h1,
+h2 {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+  font-size: var(--base-fs);
+  color: var(--grayish-blue);
+}
+
+.container {
+  width: 90%;
+  max-width: 375px;
+  margin: 4.5rem auto;
+}
+
+header p {
+  margin-block: 1rem 4.5rem;
+}
+
+.card {
+  display: grid;
+  gap: 1.5rem;
+}
+.card p {
+  margin-block: 0.5rem 2rem;
+}
+.card img {
+  margin-left: auto;
+}
+.card__supervisor {
+  padding: 1.75rem 1.5rem;
+  border-top: 4px solid var(--cyan);
+  border-radius: 0.5rem;
+  box-shadow: 0px 16px 20px 4px hsl(215deg, 39%, 90%);
+}
+.card__teambuilder {
+  padding: 1.75rem 1.5rem;
+  border-top: 4px solid var(--red);
+  border-radius: 0.5rem;
+  box-shadow: 0px 16px 20px 4px hsl(215deg, 39%, 90%);
+}
+.card__karma {
+  padding: 1.75rem 1.5rem;
+  border-top: 4px solid var(--orange);
+  border-radius: 0.5rem;
+  box-shadow: 0px 16px 20px 4px hsl(215deg, 39%, 90%);
+}
+.card__calculator {
+  padding: 1.75rem 1.5rem;
+  border-top: 4px solid var(--blue);
+  border-radius: 0.5rem;
+  box-shadow: 0px 16px 20px 4px hsl(215deg, 39%, 90%);
+}
+
+footer {
+  margin-bottom: 1rem;
+}
+
+@media all and (min-width: 480px) {
+  .container {
+    width: 90%;
+    max-width: 768px;
+  }
+
+  header {
+    max-width: 375px;
+    margin-inline: auto;
+  }
+
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (min-width: 810px) {
+  .container {
+    width: 90%;
+    max-width: 1440px;
+  }
+
+  header {
+    max-width: 505px;
+    margin-inline: auto;
+  }
+
+  .card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card__calculator {
+    grid-column: 3/-1;
+    max-width: 350px;
+  }
+  .card__karma {
+    grid-column: -3/-2;
+    max-width: 350px;
+  }
+  .card__supervisor {
+    max-width: 350px;
+    transform: translateY(50%);
+  }
+  .card__calculator {
+    max-width: 350px;
+    transform: translateY(-50%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
