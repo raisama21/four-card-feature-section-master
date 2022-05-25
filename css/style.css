@@ -191,7 +191,8 @@ footer {
   }
   .card__calculator {
     grid-column: 3/-1;
-    transform: translateY(-50%);
+    grid-row: -1;
+    transform: translateY(50%);
   }
   .card__karma {
     grid-column: -3/-2;

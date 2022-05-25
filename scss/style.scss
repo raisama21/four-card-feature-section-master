@@ -134,7 +134,8 @@ footer {
 
     &__calculator {
       grid-column: 3 / -1;
-      transform: translateY(-50%);
+      grid-row: -1;
+      transform: translateY(50%);
     }
 
     &__karma {
