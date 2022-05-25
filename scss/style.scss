@@ -3,7 +3,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  line-height: 1.5;
+  padding-block: 2%;
 }
 
 // ========== typography ==========
@@ -43,7 +43,7 @@ p {
 .container {
   width: 90%;
   max-width: 375px;
-  margin: 4.5rem auto;
+  margin-inline: auto;
 }
 
 header {
@@ -94,7 +94,7 @@ header {
 }
 
 footer {
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 // media queries =================
@@ -120,7 +120,7 @@ footer {
 // small screen breakpoint (tablet)
 @media all and (min-width: 810px) {
   .container {
-    width: 90%;
+    width: 80%;
     max-width: 1440px;
   }
 

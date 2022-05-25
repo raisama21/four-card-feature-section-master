@@ -11,13 +11,3 @@
   //   fonts
   --base-fs: 0.9375rem;
 }
-
-// @mixin for media queries ==============
-
-$small-bp: 480px;
-
-@mixin breakpoint {
-  @media all and (min-width: #{$small-bp}) {
-    @content;
-  }
-}
